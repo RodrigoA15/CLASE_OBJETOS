@@ -8,7 +8,7 @@ class Vehiculo {
     public $kilometraje;
     public $velocidad;
     public $tiempo;
-    
+
 
 
 
@@ -29,17 +29,22 @@ class Vehiculo {
             'marca: ' => $this->marca,
             'modelo: ' => $this->modelo,
             'kilometraje: ' => $this->kilometraje,
-            'fecha_registro'=>$this->fecha_registro
+            'fecha_registro'=>$this->fecha_registro,
         );
         return $arrayVehiculo;
     }
 
-public function distancia(){
+public function getdistancia(){
     $vrdistancia = $this->velocidad*$this->tiempo;
     return$vrdistancia;
 }
+public function getmarca(){
+    return$this->marca;
+}
+public function setmarca($marca){
+    $this->marca = $marca;
 
-
+}
 
 }
 ?>
